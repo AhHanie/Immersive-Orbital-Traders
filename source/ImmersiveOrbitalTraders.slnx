@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../../../Rimworld Source Code/Assembly-CSharp.csproj" />
+  <Project Path="ImmersiveOrbitalTraders.csproj" Id="be88f622-12a4-474e-8509-c63f9bd84dda" />
+</Solution>

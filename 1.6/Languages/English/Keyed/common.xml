@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <ImmersiveOrbitalTraders.LoadingLabel>Calling Orbital Trader ...</ImmersiveOrbitalTraders.LoadingLabel>
+  <ImmersiveOrbitalTraders.SettingsTitle>Immersive Orbital Traders</ImmersiveOrbitalTraders.SettingsTitle>
+  <ImmersiveOrbitalTraders.Settings.AllowTraderCaravans.Label>Show portraits for trader caravans</ImmersiveOrbitalTraders.Settings.AllowTraderCaravans.Label>
+  <ImmersiveOrbitalTraders.Settings.AllowTraderCaravans.Tooltip>Trader caravans already have visible pawns on the map and in trade context. Enabling portraits for caravans may mismatch the shown character and break immersion.</ImmersiveOrbitalTraders.Settings.AllowTraderCaravans.Tooltip>
+  <ImmersiveOrbitalTraders.NoLoreLabel>No lore available.</ImmersiveOrbitalTraders.NoLoreLabel>
+</LanguageData>
