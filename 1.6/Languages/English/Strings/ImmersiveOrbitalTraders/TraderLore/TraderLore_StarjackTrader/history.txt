@@ -1,0 +1,3 @@
+﻿They began voidwalk operations in [startYear] after washing out of formal fleet command.
+A hull breach in [startYear] killed their mentor and rewrote every safety protocol on their ship.
+

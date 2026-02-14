@@ -1,0 +1,3 @@
+﻿[name] commands gray-market convoys tolerated by [faction] because results keep arriving.
+To [faction] accountants, [name] is listed as a logistics contractor with unusual discretion clauses.
+

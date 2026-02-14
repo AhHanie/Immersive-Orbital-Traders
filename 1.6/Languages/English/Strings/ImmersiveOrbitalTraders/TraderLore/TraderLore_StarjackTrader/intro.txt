@@ -1,0 +1,3 @@
+﻿[name] works salvage lanes for [faction], bringing station debris back as usable fortune.
+[faction] trusts [name] to recover value from wreck fields everyone else writes off.
+

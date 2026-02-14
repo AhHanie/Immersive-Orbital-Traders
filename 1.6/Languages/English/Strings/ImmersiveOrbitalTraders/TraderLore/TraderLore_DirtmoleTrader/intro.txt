@@ -1,0 +1,3 @@
+﻿[name] flies for [faction], moving ore contracts no surface broker can secure.
+[faction] relies on [name] when mountain colonies run out of drills and patience.
+

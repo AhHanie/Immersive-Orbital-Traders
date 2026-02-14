@@ -1,0 +1,3 @@
+﻿They entered orbital hauling in [startYear] after years moving caravans through winter passes.
+In [startYear], a famine contract cemented their reputation when they delivered through ash storms.
+

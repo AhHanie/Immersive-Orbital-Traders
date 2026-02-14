@@ -6,9 +6,9 @@
     <supportedVersions>
         <li>1.6</li>
     </supportedVersions>
-    <description>A framework that allows adding a portrait image and lore to orbital traders.</description>
+    <description>Adds immersive trader portraits and dynamic lore to the trade dialog. Each orbital trader can use custom character defs with portrait textures and per-character grammar rulepacks for varied storytelling.</description>
     <modVersion>1.0.0</modVersion>
-    <url>https://github.com/AhHanie/Override-Assignments</url>
+    <url>https://github.com/AhHanie/Immersive-Orbital-Traders</url>
     <modDependencies>
         <li>
             <packageId>brrainz.harmony</packageId>

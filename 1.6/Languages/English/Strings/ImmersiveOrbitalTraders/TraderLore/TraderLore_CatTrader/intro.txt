@@ -1,0 +1,3 @@
+﻿[name] represents [faction] with a smile that usually means the price just changed.
+In ports loyal to [faction], [name] is known before the shuttle even lands.
+

@@ -1,0 +1,3 @@
+﻿If a colony pays on time, [name] becomes a lifelong ally.
+If a colony cheats once, [name] remembers forever.
+

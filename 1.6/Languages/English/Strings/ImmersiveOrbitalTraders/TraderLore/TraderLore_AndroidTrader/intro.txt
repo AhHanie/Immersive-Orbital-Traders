@@ -1,0 +1,3 @@
+﻿[name] is a machine quartermaster licensed by [faction].
+Under [faction] registry codes, [name] handles orbital manifests without deviation.
+

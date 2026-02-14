@@ -1,0 +1,3 @@
+﻿[name] brokers frontier cargo for [faction], favored by settlements beyond regular patrol lines.
+Outland stations under [faction] authority call [name] when winter logistics become survival math.
+

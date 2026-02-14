@@ -1,0 +1,3 @@
+﻿Its memory core tracks contracts back to [startYear] and flags every broken promise.
+Since [startYear], it has optimized routes through pirate lanes that human captains avoided.
+

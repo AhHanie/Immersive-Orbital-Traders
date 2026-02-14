@@ -1,0 +1,3 @@
+﻿They opened their first independent ledger in [startYear] with one shuttle and too much debt.
+A refinery bankruptcy in [startYear] left them stranded, so they learned to always carry reserve fuel.
+

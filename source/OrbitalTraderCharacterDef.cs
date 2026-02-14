@@ -8,7 +8,9 @@ namespace ImmersiveOrbitalTraders
     {
         public GraphicData portraitGraphicData;
         public List<TraderKindDef> allowedTraderKinds;
+        public RulePackDef loreRulePack;
         public string loreText;
+        public bool disabled = false;
 
         public override void ResolveReferences()
         {
@@ -37,9 +39,9 @@ namespace ImmersiveOrbitalTraders
                 yield return "portraitGraphicData.texPath is required.";
             }
 
-            if (string.IsNullOrWhiteSpace(loreText))
+            if (loreRulePack == null && string.IsNullOrWhiteSpace(loreText))
             {
-                yield return "loreText is required.";
+                yield return "Either loreRulePack or loreText is required.";
             }
 
             if (allowedTraderKinds != null)

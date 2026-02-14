@@ -51,7 +51,8 @@ namespace ImmersiveOrbitalTraders
             if (!IsEligibleTrader(trader))
             {
                 state.Initialized = true;
-                Logger.Message("Skipping portrait panel for non-orbital trader type: " + trader.GetType().Name);
+                string traderType = trader.GetType().Name;
+                Logger.Message("Skipping portrait panel for non-orbital trader type: " + traderType);
                 return;
             }
 
@@ -59,26 +60,34 @@ namespace ImmersiveOrbitalTraders
             state.TraderKind = traderKind;
             state.Initialized = true;
 
-            if (!TryGetOrCreateSelection(trader, traderKind, out OrbitalTraderCharacterDef selected, out Graphic portraitGraphic))
+            if (!TryGetOrCreateSelection(trader, traderKind, out OrbitalTraderCharacterDef selected, out Graphic portraitGraphic, out string generatedName, out string resolvedLore, out bool loreResolved))
             {
                 return;
             }
 
             state.SelectedCharacter = selected;
             state.PortraitGraphic = portraitGraphic;
+            state.ResolvedLore = resolvedLore;
+            state.LoreResolved = loreResolved;
             state.LoreScrollPosition = Vector2.zero;
             Logger.Message("Selected trader character '" + selected.defName + "' for trader kind '" + traderKind.defName + "'.");
         }
 
-        private static bool TryGetOrCreateSelection(ITrader trader, TraderKindDef traderKind, out OrbitalTraderCharacterDef selected, out Graphic portraitGraphic)
+        private static bool TryGetOrCreateSelection(ITrader trader, TraderKindDef traderKind, out OrbitalTraderCharacterDef selected, out Graphic portraitGraphic, out string generatedName, out string resolvedLore, out bool loreResolved)
         {
             selected = null;
             portraitGraphic = null;
+            generatedName = string.Empty;
+            resolvedLore = string.Empty;
+            loreResolved = false;
 
             if (SelectionByTrader.TryGetValue(trader, out TraderCharacterSelection existing))
             {
                 selected = existing.Character;
                 portraitGraphic = existing.PortraitGraphic;
+                generatedName = existing.GeneratedName;
+                resolvedLore = existing.ResolvedLore;
+                loreResolved = existing.LoreResolved;
                 return true;
             }
 
@@ -96,11 +105,17 @@ namespace ImmersiveOrbitalTraders
                 return false;
             }
 
+            resolvedLore = OrbitalTraderCharacterManager.ResolveLoreText(trader, selected, out generatedName);
+            loreResolved = !string.IsNullOrWhiteSpace(resolvedLore);
+
             SelectionByTrader.Remove(trader);
             SelectionByTrader.Add(trader, new TraderCharacterSelection
             {
                 Character = selected,
-                PortraitGraphic = portraitGraphic
+                PortraitGraphic = portraitGraphic,
+                GeneratedName = generatedName,
+                ResolvedLore = resolvedLore,
+                LoreResolved = loreResolved
             });
             return true;
         }
@@ -146,9 +161,7 @@ namespace ImmersiveOrbitalTraders
             float contentWidth = PanelWidth - (PanelPadding * 2f);
             float portraitDrawSize = Mathf.Min(PortraitSize, contentWidth);
 
-            string loreText = string.IsNullOrWhiteSpace(state.SelectedCharacter.loreText)
-                ? "ImmersiveOrbitalTraders.NoLoreLabel".Translate().ToString()
-                : state.SelectedCharacter.loreText;
+            string loreText = GetDisplayLoreText(state);
             float loreTextHeight = Text.CalcHeight(loreText, Mathf.Max(1f, contentWidth - 18f));
 
             float neededHeight = (PanelPadding * 2f) + portraitDrawSize + LoreTopSpacing + loreTextHeight + 4f;
@@ -179,17 +192,21 @@ namespace ImmersiveOrbitalTraders
             }
 
             activeDialog = dialog;
-            CurrentState.Initialized = false;
-            CurrentState.LoreIsHeightCapped = false;
-            CurrentState.LoreScrollPosition = Vector2.zero;
-            CurrentState.SelectedCharacter = null;
-            CurrentState.PortraitGraphic = null;
 
             if (CurrentState.PanelWindow != null)
             {
-                CurrentState.PanelWindow.Close(doCloseSound: false);
+                DialogTradePortraitWindow panel = CurrentState.PanelWindow;
                 CurrentState.PanelWindow = null;
+                panel.Close(doCloseSound: false);
             }
+
+            CurrentState.Initialized = false;
+            CurrentState.LoreIsHeightCapped = false;
+            CurrentState.LoreResolved = false;
+            CurrentState.LoreScrollPosition = Vector2.zero;
+            CurrentState.SelectedCharacter = null;
+            CurrentState.PortraitGraphic = null;
+            CurrentState.ResolvedLore = string.Empty;
 
             CurrentState.Trader = trader;
             CurrentState.TraderKind = trader.TraderKind;
@@ -211,12 +228,24 @@ namespace ImmersiveOrbitalTraders
 
             CurrentState.Initialized = false;
             CurrentState.LoreIsHeightCapped = false;
+            CurrentState.LoreResolved = false;
             CurrentState.LoreScrollPosition = Vector2.zero;
             CurrentState.Trader = null;
             CurrentState.TraderKind = null;
             CurrentState.SelectedCharacter = null;
             CurrentState.PortraitGraphic = null;
+            CurrentState.ResolvedLore = string.Empty;
             activeDialog = null;
+        }
+
+        private static string GetDisplayLoreText(DialogTradePortraitState state)
+        {
+            if (state.LoreResolved && !string.IsNullOrWhiteSpace(state.ResolvedLore))
+            {
+                return state.ResolvedLore;
+            }
+
+            return "ImmersiveOrbitalTraders.NoLoreLabel".Translate().ToString();
         }
 
         public sealed class DialogTradePortraitWindow : Window
@@ -256,6 +285,11 @@ namespace ImmersiveOrbitalTraders
 
             public override void DoWindowContents(Rect inRect)
             {
+                // Handle a race condition where closing the trade window, doesn't close the side panel at the same time
+                if (state.PortraitGraphic == null)
+                {
+                    return;
+                }
                 windowRect = CalculatePanelRect(parentDialog, state);
                 Widgets.DrawBoxSolid(new Rect(inRect.x, inRect.y, 2f, inRect.height), Widgets.WindowBGFillColor);
 
@@ -277,9 +311,7 @@ namespace ImmersiveOrbitalTraders
                 }
 
                 Rect loreOutRect = new Rect(portraitRect.x, loreTop, portraitRect.width, loreHeight);
-                string loreText = string.IsNullOrWhiteSpace(state.SelectedCharacter.loreText)
-                    ? "ImmersiveOrbitalTraders.NoLoreLabel".Translate().ToString()
-                    : state.SelectedCharacter.loreText;
+                string loreText = GetDisplayLoreText(state);
 
                 float viewWidth = loreOutRect.width - 18f;
                 float loreTextHeight = Text.CalcHeight(loreText, viewWidth);
@@ -326,11 +358,13 @@ namespace ImmersiveOrbitalTraders
     {
         public bool Initialized;
         public bool LoreIsHeightCapped;
+        public bool LoreResolved;
         public Vector2 LoreScrollPosition;
         public ITrader Trader;
         public TraderKindDef TraderKind;
         public OrbitalTraderCharacterDef SelectedCharacter;
         public Graphic PortraitGraphic;
+        public string ResolvedLore;
         public DialogTrade_DoWindowContents_Patch.DialogTradePortraitWindow PanelWindow;
     }
 
@@ -338,5 +372,8 @@ namespace ImmersiveOrbitalTraders
     {
         public OrbitalTraderCharacterDef Character;
         public Graphic PortraitGraphic;
+        public string GeneratedName;
+        public string ResolvedLore;
+        public bool LoreResolved;
     }
 }

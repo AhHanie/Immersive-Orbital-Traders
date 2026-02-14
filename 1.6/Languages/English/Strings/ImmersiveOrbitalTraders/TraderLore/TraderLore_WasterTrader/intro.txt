@@ -1,0 +1,3 @@
+﻿[name] contracts with [faction] to serve toxic belts where conventional crews refuse to land.
+[faction] route planners label [name] as essential for zones marked uninsurable.
+

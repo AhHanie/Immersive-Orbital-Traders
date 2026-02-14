@@ -1,0 +1,3 @@
+﻿[name] serves [faction] as a shock-haul captain trained to dock fast and leave faster.
+[faction] deploys [name] on routes where cargo and combat share the same timetable.
+
