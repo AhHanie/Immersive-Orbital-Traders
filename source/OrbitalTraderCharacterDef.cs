@@ -10,6 +10,7 @@ namespace ImmersiveOrbitalTraders
         public List<TraderKindDef> allowedTraderKinds;
         public RulePackDef loreRulePack;
         public string loreText;
+        public Gender gender = Gender.Male;
         public bool disabled = false;
 
         public override void ResolveReferences()

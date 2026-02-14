@@ -138,8 +138,7 @@ namespace ImmersiveOrbitalTraders
 
             try
             {
-                Gender gender = Rand.Value < 0.5f ? Gender.Male : Gender.Female;
-                NameTriple generatedTriple = PawnBioAndNameGenerator.GeneratePawnName_Shuffled(PawnNameCategory.HumanStandard, gender, null, forceNoNick: false);
+                NameTriple generatedTriple = PawnBioAndNameGenerator.GeneratePawnName_Shuffled(PawnNameCategory.HumanStandard, characterDef.gender, null, forceNoNick: false);
                 string generatedName = generatedTriple.First + " " + generatedTriple.Last;
                 if (string.IsNullOrWhiteSpace(generatedName))
                 {

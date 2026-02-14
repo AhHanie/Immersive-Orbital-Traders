@@ -107,6 +107,18 @@ When a trade dialog opens, the mod builds a candidate list from all global defs 
 
 ---
 
+#### `gender` _(optional, default: `Male`)_
+
+The gender used when generating the trader's name. Accepts any RimWorld `Gender` value: `Male`, `Female`, or `None`.
+
+```xml
+<gender>Female</gender>
+```
+
+When set to `None`, a gender-neutral name is generated.
+
+---
+
 #### `disabled` _(optional, default: `false`)_
 
 When set to `true`, this def is ignored entirely during character selection. The character will not appear in trade dialogs. Intended for patching — see [Disabling Characters with Patches](Disabling-Characters-with-Patches).
