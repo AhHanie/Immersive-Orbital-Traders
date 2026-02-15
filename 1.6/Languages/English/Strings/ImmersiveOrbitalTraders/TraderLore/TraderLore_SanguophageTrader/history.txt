@@ -1,4 +1,4 @@
 ﻿Their archives claim they entered trade in [startYear], though no one agrees which calendar that was.
 A blood-feud settlement in [startYear] gave them long memory rights over several dynastic markets.
-Contracts from [startYear] onward are archived with notes on what almost went wrong.
-Lessons learned around [startYear] still shape how [name] picks partners and routes.
+Archive entries claim trade activity in [startYear], though no historian agrees on whose calendar that was.
+A dynastic settlement in [startYear] granted rights that still outlive most governments.

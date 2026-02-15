@@ -1,4 +1,4 @@
 ﻿Their combat career started in [startYear], but logistics turned out to pay better than glory.
 After a boarding action in [startYear], they rebuilt their crew around discipline and redundancy.
-Contracts from [startYear] onward are archived with notes on what almost went wrong.
-Lessons learned around [startYear] still shape how [name] picks partners and routes.
+Back in [startYear], an ambush run killed half his convoy and cured everyone else of casual planning.
+After [startYear], he rebuilt operations around redundancies that survive bad luck and bad leadership.

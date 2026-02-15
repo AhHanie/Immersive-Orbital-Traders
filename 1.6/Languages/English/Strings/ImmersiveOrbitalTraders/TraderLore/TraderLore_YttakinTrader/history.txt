@@ -1,4 +1,4 @@
 ﻿They began cold-route service in [startYear], learning to read storms better than instruments.
 A whiteout convoy in [startYear] forged their doctrine: travel light, pack deep, never split escort.
-Contracts from [startYear] onward are archived with notes on what almost went wrong.
-Lessons learned around [startYear] still shape how [name] picks partners and routes.
+He started cold-route hauling in [startYear], learning storm behavior from survivors rather than manuals.
+A whiteout convoy in [startYear] proved his rule: never split escort, never gamble on thaw.

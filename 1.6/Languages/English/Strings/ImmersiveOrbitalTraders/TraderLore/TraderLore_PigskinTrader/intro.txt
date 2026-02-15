@@ -1,4 +1,4 @@
 ﻿[name] runs practical freight for [faction], focused on what keeps a colony alive next week.
 [faction] markets [name] as a bulk supplier, but veterans know they are also an excellent fixer.
-Dock crews usually recognize [name] before the shuttle clamps even finish cycling.
-With [faction] paperwork in order, [name] treats every orbital minute like paid time.
+[name]''s shuttle never looks glamorous, but it always looks full.
+[faction] advertises bulk discounts; veterans know he also solves emergencies quietly.

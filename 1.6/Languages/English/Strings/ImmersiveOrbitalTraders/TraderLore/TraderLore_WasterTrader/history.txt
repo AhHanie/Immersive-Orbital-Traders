@@ -1,4 +1,4 @@
 ﻿They entered hazardous logistics in [startYear] after outlasting a refinery collapse no one else survived.
 In [startYear], they built a mobile decon line that turned poisoned outposts back into customers.
-Contracts from [startYear] onward are archived with notes on what almost went wrong.
-Lessons learned around [startYear] still shape how [name] picks partners and routes.
+A refinery collapse in [startYear] left one survivor and created the trader standing in your comms now.
+By [startYear], a mobile decon line had turned poisoned outposts back into functioning customers.

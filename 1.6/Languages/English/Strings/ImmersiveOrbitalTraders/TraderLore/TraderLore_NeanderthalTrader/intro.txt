@@ -1,4 +1,4 @@
 ﻿[name] flies under [faction] colors and speaks only when the terms matter.
 [faction] keeps [name] on retainer for jobs where reliability outranks speed.
-Dock crews usually recognize [name] before the shuttle clamps even finish cycling.
-With [faction] paperwork in order, [name] treats every orbital minute like paid time.
+[name] wastes no words, which is why every word lands like a hammer.
+[faction] keeps him close for jobs where reliability matters more than speed records.

@@ -1,4 +1,4 @@
 ﻿[name] serves [faction] as a shock-haul captain trained to dock fast and leave faster.
 [faction] deploys [name] on routes where cargo and combat share the same timetable.
-Dock crews usually recognize [name] before the shuttle clamps even finish cycling.
-With [faction] paperwork in order, [name] treats every orbital minute like paid time.
+Dock alarms usually switch to military cadence the moment [name] requests approach clearance.
+[faction] uses him when cargo manifests and threat reports are equally urgent.
