@@ -1,3 +1,4 @@
 ﻿They started as a courier in [startYear] and learned every customs loophole in the sector.
 Their first independent run in [startYear] ended with profit, contraband rumors, and no witnesses.
-
+Contracts from [startYear] onward are archived with notes on what almost went wrong.
+Lessons learned around [startYear] still shape how [name] picks partners and routes.

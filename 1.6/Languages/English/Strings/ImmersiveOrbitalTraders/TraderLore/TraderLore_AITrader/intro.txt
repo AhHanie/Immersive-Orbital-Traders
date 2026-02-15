@@ -1,0 +1,4 @@
+﻿[name] represents [faction] as a synthetic trade intelligence embedded in a mobile frame.
+[faction] dispatches [name] when precision matters more than charm.
+Dock crews usually recognize [name] by the cyan optics and the silent escort drones.
+With [faction] credentials validated, [name] starts negotiations before the ramp fully lowers.

@@ -1,3 +1,4 @@
 ﻿They entered orbital hauling in [startYear] after years moving caravans through winter passes.
 In [startYear], a famine contract cemented their reputation when they delivered through ash storms.
-
+Contracts from [startYear] onward are archived with notes on what almost went wrong.
+Lessons learned around [startYear] still shape how [name] picks partners and routes.

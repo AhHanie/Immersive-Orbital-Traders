@@ -1,3 +1,4 @@
 ﻿[name] brokers frontier cargo for [faction], favored by settlements beyond regular patrol lines.
 Outland stations under [faction] authority call [name] when winter logistics become survival math.
-
+Dock crews usually recognize [name] before the shuttle clamps even finish cycling.
+With [faction] paperwork in order, [name] treats every orbital minute like paid time.

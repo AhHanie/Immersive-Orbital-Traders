@@ -1,3 +1,4 @@
 ﻿They started running short-hop trades in [startYear] and graduated to hazard routes within a year.
 A reactor flare in [startYear] burned half their manifest and taught them to diversify every run.
-
+Contracts from [startYear] onward are archived with notes on what almost went wrong.
+Lessons learned around [startYear] still shape how [name] picks partners and routes.

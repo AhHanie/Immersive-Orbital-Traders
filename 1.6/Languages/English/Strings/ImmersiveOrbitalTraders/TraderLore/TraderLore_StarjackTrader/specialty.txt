@@ -1,3 +1,4 @@
 ﻿Their cargo is a rotating puzzle of reactor parts, pressure doors, and high-grade scrap composites.
 They can identify original manufacturers by fracture patterns on torn bulkheads.
-
+[name] can usually source replacements before a colony finishes listing failures.
+Clients who share precise diagnostics get faster quotes and cleaner fulfillment.

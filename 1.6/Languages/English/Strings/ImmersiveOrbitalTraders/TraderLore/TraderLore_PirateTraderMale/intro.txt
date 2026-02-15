@@ -1,3 +1,4 @@
 ﻿[name] commands gray-market convoys tolerated by [faction] because results keep arriving.
 To [faction] accountants, [name] is listed as a logistics contractor with unusual discretion clauses.
-
+Dock crews usually recognize [name] before the shuttle clamps even finish cycling.
+With [faction] paperwork in order, [name] treats every orbital minute like paid time.

@@ -1,3 +1,4 @@
 ﻿Her offers include weapons, encrypted maps, and debts transferable between outlaw crews.
 She negotiates calmly, but every calm sentence carries an implied backup plan.
-
+[name] treats reputation like cargo and protects it as fiercely as margin.
+Even a small purchase is handled like the opening move of a longer agreement.

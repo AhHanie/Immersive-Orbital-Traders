@@ -1,3 +1,4 @@
 ﻿They transport munitions, armor, and emergency rations in hardened containers with independent locks.
 Their contract clauses include evacuation drills, threat maps, and strict payment windows.
-
+[name] can usually source replacements before a colony finishes listing failures.
+Clients who share precise diagnostics get faster quotes and cleaner fulfillment.

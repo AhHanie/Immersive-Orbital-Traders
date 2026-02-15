@@ -221,4 +221,30 @@
     </rulePack>
   </RulePackDef>
 
+  <RulePackDef>
+    <defName>TraderLore_AITrader</defName>
+    <rulePack>
+      <rulesFiles>
+        <li>root->ImmersiveOrbitalTraders/TraderLore/TraderLore_AITrader/root</li>
+        <li>intro->ImmersiveOrbitalTraders/TraderLore/TraderLore_AITrader/intro</li>
+        <li>history->ImmersiveOrbitalTraders/TraderLore/TraderLore_AITrader/history</li>
+        <li>edge->ImmersiveOrbitalTraders/TraderLore/TraderLore_AITrader/edge</li>
+        <li>closing->ImmersiveOrbitalTraders/TraderLore/TraderLore_AITrader/closing</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>TraderLore_EldritchTrader</defName>
+    <rulePack>
+      <rulesFiles>
+        <li>root->ImmersiveOrbitalTraders/TraderLore/TraderLore_EldritchTrader/root</li>
+        <li>intro->ImmersiveOrbitalTraders/TraderLore/TraderLore_EldritchTrader/intro</li>
+        <li>history->ImmersiveOrbitalTraders/TraderLore/TraderLore_EldritchTrader/history</li>
+        <li>style->ImmersiveOrbitalTraders/TraderLore/TraderLore_EldritchTrader/style</li>
+        <li>closing->ImmersiveOrbitalTraders/TraderLore/TraderLore_EldritchTrader/closing</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
 </Defs>

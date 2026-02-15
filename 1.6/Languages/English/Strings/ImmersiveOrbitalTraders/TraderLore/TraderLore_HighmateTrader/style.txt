@@ -1,3 +1,4 @@
 ﻿They prefer long contracts, generous grace periods, and penalties hidden in polite language.
 Their cargo favors medicine, art, and morale goods that keep fragile colonies functional.
-
+[name] treats reputation like cargo and protects it as fiercely as margin.
+Even a small purchase is handled like the opening move of a longer agreement.

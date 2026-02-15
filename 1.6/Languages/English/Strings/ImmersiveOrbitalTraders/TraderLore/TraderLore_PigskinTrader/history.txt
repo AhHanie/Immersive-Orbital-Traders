@@ -1,3 +1,4 @@
 ﻿They opened their first independent ledger in [startYear] with one shuttle and too much debt.
 A refinery bankruptcy in [startYear] left them stranded, so they learned to always carry reserve fuel.
-
+Contracts from [startYear] onward are archived with notes on what almost went wrong.
+Lessons learned around [startYear] still shape how [name] picks partners and routes.

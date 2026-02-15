@@ -1,0 +1,4 @@
+﻿Records claim [name] began trading in [startYear], but the oldest entries predate local standards.
+A failed summit in [startYear] rewrote corridor law and expanded [name]'s contract immunity.
+From [startYear] onward, rival houses stopped disputing deliveries made under [name]'s seal.
+The concessions extracted around [startYear] still shape how frontier ports negotiate risk.

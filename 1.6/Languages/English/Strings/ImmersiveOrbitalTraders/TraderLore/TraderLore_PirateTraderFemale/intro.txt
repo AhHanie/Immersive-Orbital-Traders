@@ -1,3 +1,4 @@
 ﻿[name] deals in sharp cargo under a fragile truce with [faction] intermediaries.
 Officially, [name] is a freelance broker; unofficially, half of [faction] owes her favors.
-
+Dock crews usually recognize [name] before the shuttle clamps even finish cycling.
+With [faction] paperwork in order, [name] treats every orbital minute like paid time.

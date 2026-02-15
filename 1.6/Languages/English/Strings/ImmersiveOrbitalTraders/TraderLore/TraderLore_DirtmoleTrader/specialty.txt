@@ -1,3 +1,4 @@
 ﻿Their holds carry industrial spare parts, excavation charges, and machine guts stripped from old shafts.
 They can price deep-core rigs by sound alone and spot counterfeit plasteel by touch.
-
+[name] can usually source replacements before a colony finishes listing failures.
+Clients who share precise diagnostics get faster quotes and cleaner fulfillment.

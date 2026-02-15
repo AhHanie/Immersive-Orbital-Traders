@@ -1,3 +1,4 @@
 ﻿[name] negotiates for [faction] with a diplomat's cadence and a broker's instincts.
 Settlements tied to [faction] request [name] when tempers are high and trust is low.
-
+Dock crews usually recognize [name] before the shuttle clamps even finish cycling.
+With [faction] paperwork in order, [name] treats every orbital minute like paid time.

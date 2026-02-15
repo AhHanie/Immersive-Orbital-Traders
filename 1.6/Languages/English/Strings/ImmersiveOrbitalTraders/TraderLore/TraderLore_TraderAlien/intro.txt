@@ -1,3 +1,4 @@
 ﻿[name] arrives as an emissary trader bound to [faction] through layered treaties.
 Protocol officers in [faction] ports prepare ceremonial docks whenever [name] enters orbit.
-
+Dock crews usually recognize [name] before the shuttle clamps even finish cycling.
+With [faction] paperwork in order, [name] treats every orbital minute like paid time.

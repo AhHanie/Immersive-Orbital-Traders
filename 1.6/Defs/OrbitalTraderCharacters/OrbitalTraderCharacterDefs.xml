@@ -151,7 +151,7 @@
     </portraitGraphicData>
     <loreRulePack>TraderLore_TraderAlien</loreRulePack>
     <loreText>This offworld emissary deals in unfamiliar alloys and expects strict adherence to ceremonial protocol.</loreText>
-    <gender>None</gender>
+    <gender>Male</gender>
   </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
 
   <ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
@@ -175,5 +175,26 @@
     <loreText>A cold-world negotiator with a reputation for fair weights, fair prices, and very sharp terms.</loreText>
     <gender>Male</gender>
   </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
-</Defs>
 
+  <ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
+    <defName>IOT_AITrader</defName>
+    <portraitGraphicData>
+      <texPath>ImmersiveOrbitalTraders/AITrader</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </portraitGraphicData>
+    <loreRulePack>TraderLore_AITrader</loreRulePack>
+    <loreText>A synthetic broker with near-perfect recall who prices opportunity faster than most crews can ask.</loreText>
+    <gender>Female</gender>
+  </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
+
+  <ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
+    <defName>IOT_EldritchTrader</defName>
+    <portraitGraphicData>
+      <texPath>ImmersiveOrbitalTraders/EldritchTrader</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </portraitGraphicData>
+    <loreRulePack>TraderLore_EldritchTrader</loreRulePack>
+    <loreText>An enigmatic offworld merchant offering strange materials under strict ritual terms.</loreText>
+    <gender>Male</gender>
+  </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
+</Defs>

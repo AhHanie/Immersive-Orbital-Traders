@@ -1,3 +1,4 @@
 ﻿[name] flies for [faction], moving ore contracts no surface broker can secure.
 [faction] relies on [name] when mountain colonies run out of drills and patience.
-
+Dock crews usually recognize [name] before the shuttle clamps even finish cycling.
+With [faction] paperwork in order, [name] treats every orbital minute like paid time.

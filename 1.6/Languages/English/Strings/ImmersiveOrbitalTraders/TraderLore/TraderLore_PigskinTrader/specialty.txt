@@ -1,3 +1,4 @@
 ﻿Their manifests lean on staple foods, industrial solvents, filters, and low-failure machinery.
 They price by volume, reward repeat buyers, and quietly forgive one late payment per year.
-
+[name] can usually source replacements before a colony finishes listing failures.
+Clients who share precise diagnostics get faster quotes and cleaner fulfillment.

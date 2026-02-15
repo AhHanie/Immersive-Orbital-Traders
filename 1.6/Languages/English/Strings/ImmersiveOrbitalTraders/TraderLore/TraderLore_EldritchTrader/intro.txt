@@ -1,0 +1,4 @@
+﻿[name] arrives under [faction] sanction, though no clerk can explain the full treaty text.
+Protocol teams in [faction] orbit clear a ceremonial berth whenever [name] enters system.
+Most observers notice [name] before the shuttle by the low-band signal harmonics.
+Even hardened captains lower their voices once [name] steps onto the dock.

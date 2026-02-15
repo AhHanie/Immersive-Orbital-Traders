@@ -1,3 +1,4 @@
 ﻿[name] is a machine quartermaster licensed by [faction].
 Under [faction] registry codes, [name] handles orbital manifests without deviation.
-
+Dock crews usually recognize [name] before the shuttle clamps even finish cycling.
+With [faction] paperwork in order, [name] treats every orbital minute like paid time.

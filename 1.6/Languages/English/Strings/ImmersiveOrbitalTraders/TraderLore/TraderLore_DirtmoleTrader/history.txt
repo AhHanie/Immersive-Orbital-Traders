@@ -1,3 +1,4 @@
 ﻿Since [startYear], they have mapped subcrust freight tunnels across three hostile worlds.
 A cave-in during the [startYear] season killed their first crew and shaped every rule they keep today.
-
+Contracts from [startYear] onward are archived with notes on what almost went wrong.
+Lessons learned around [startYear] still shape how [name] picks partners and routes.

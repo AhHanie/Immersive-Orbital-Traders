@@ -1,3 +1,4 @@
 ﻿If a colony pays on time, [name] becomes a lifelong ally.
 If a colony cheats once, [name] remembers forever.
-
+Colonies that plan ahead get better terms than those that wait for panic.
+Once [name] commits, delivery timing becomes a promise instead of a guess.
