@@ -29,7 +29,7 @@ namespace ImmersiveOrbitalTraders
             DialogTradePortraitState state = CurrentState;
             EnsureInitialized(state);
 
-            if (state.SelectedCharacter == null || state.PortraitGraphic == null)
+            if (state.SelectedCharacter == null || (state.PortraitGraphic == null && state.PortraitTexture == null))
             {
                 return;
             }
@@ -52,7 +52,6 @@ namespace ImmersiveOrbitalTraders
             {
                 state.Initialized = true;
                 string traderType = trader.GetType().Name;
-                Logger.Message("Skipping portrait panel for non-orbital trader type: " + traderType);
                 return;
             }
 
@@ -60,52 +59,65 @@ namespace ImmersiveOrbitalTraders
             state.TraderKind = traderKind;
             state.Initialized = true;
 
-            if (!TryGetOrCreateSelection(trader, traderKind, out OrbitalTraderCharacterDef selected, out Graphic portraitGraphic, out string generatedName, out string resolvedLore, out bool loreResolved))
+            if (!TryGetOrCreateSelection(trader, traderKind, out OrbitalTraderCharacterDef selected, out Graphic portraitGraphic, out Texture portraitTexture, out string generatedName, out string resolvedLore, out bool loreResolved))
             {
                 return;
             }
 
             state.SelectedCharacter = selected;
             state.PortraitGraphic = portraitGraphic;
+            state.PortraitTexture = portraitTexture;
             state.ResolvedLore = resolvedLore;
             state.LoreResolved = loreResolved;
             state.LoreScrollPosition = Vector2.zero;
-            Logger.Message("Selected trader character '" + selected.defName + "' for trader kind '" + traderKind.defName + "'.");
         }
 
-        private static bool TryGetOrCreateSelection(ITrader trader, TraderKindDef traderKind, out OrbitalTraderCharacterDef selected, out Graphic portraitGraphic, out string generatedName, out string resolvedLore, out bool loreResolved)
+        private static bool TryGetOrCreateSelection(ITrader trader, TraderKindDef traderKind, out OrbitalTraderCharacterDef selected, out Graphic portraitGraphic, out Texture portraitTexture, out string generatedName, out string resolvedLore, out bool loreResolved)
         {
             selected = null;
             portraitGraphic = null;
+            portraitTexture = null;
             generatedName = string.Empty;
             resolvedLore = string.Empty;
             loreResolved = false;
+            string generatedFactionPawnName = null;
+            Gender generatedFactionPawnGender = Gender.None;
+            Gender? preferredGender = null;
 
             if (SelectionByTrader.TryGetValue(trader, out TraderCharacterSelection existing))
             {
                 selected = existing.Character;
                 portraitGraphic = existing.PortraitGraphic;
+                portraitTexture = existing.PortraitTexture;
                 generatedName = existing.GeneratedName;
                 resolvedLore = existing.ResolvedLore;
                 loreResolved = existing.LoreResolved;
                 return true;
             }
 
-            selected = OrbitalTraderCharacterManager.GetRandomCharacter(traderKind);
+            if (ModSettings.UseRandomFactionPawnPortrait &&
+                OrbitalTraderCharacterManager.TryGenerateFactionPawnData(trader, out Texture generatedPortraitTexture, out generatedFactionPawnName, out generatedFactionPawnGender))
+            {
+                portraitTexture = generatedPortraitTexture;
+                if (generatedFactionPawnGender != Gender.None)
+                {
+                    preferredGender = generatedFactionPawnGender;
+                }
+            }
+
+            selected = OrbitalTraderCharacterManager.GetRandomCharacter(traderKind, preferredGender);
             if (selected == null)
             {
-                Logger.Message("No eligible trader character for trader kind: " + traderKind.defName);
                 return false;
             }
 
             portraitGraphic = selected.portraitGraphicData.Graphic;
             if (portraitGraphic == null)
             {
-                Logger.Warning("Selected trader character has no usable portrait graphic: " + selected.defName);
                 return false;
             }
 
-            resolvedLore = OrbitalTraderCharacterManager.ResolveLoreText(trader, selected, out generatedName);
+            resolvedLore = OrbitalTraderCharacterManager.ResolveLoreText(trader, selected, out generatedName, generatedFactionPawnName);
             loreResolved = !string.IsNullOrWhiteSpace(resolvedLore);
 
             SelectionByTrader.Remove(trader);
@@ -113,6 +125,7 @@ namespace ImmersiveOrbitalTraders
             {
                 Character = selected,
                 PortraitGraphic = portraitGraphic,
+                PortraitTexture = portraitTexture,
                 GeneratedName = generatedName,
                 ResolvedLore = resolvedLore,
                 LoreResolved = loreResolved
@@ -206,6 +219,7 @@ namespace ImmersiveOrbitalTraders
             CurrentState.LoreScrollPosition = Vector2.zero;
             CurrentState.SelectedCharacter = null;
             CurrentState.PortraitGraphic = null;
+            CurrentState.PortraitTexture = null;
             CurrentState.ResolvedLore = string.Empty;
 
             CurrentState.Trader = trader;
@@ -234,6 +248,7 @@ namespace ImmersiveOrbitalTraders
             CurrentState.TraderKind = null;
             CurrentState.SelectedCharacter = null;
             CurrentState.PortraitGraphic = null;
+            CurrentState.PortraitTexture = null;
             CurrentState.ResolvedLore = string.Empty;
             activeDialog = null;
         }
@@ -286,7 +301,7 @@ namespace ImmersiveOrbitalTraders
             public override void DoWindowContents(Rect inRect)
             {
                 // Handle a race condition where closing the trade window, doesn't close the side panel at the same time
-                if (state.PortraitGraphic == null)
+                if (state.PortraitGraphic == null && state.PortraitTexture == null)
                 {
                     return;
                 }
@@ -297,7 +312,7 @@ namespace ImmersiveOrbitalTraders
                 float drawPortraitSize = Mathf.Min(PortraitSize, contentRect.width);
                 Rect portraitRect = new Rect(contentRect.x + (contentRect.width - drawPortraitSize) * 0.5f, contentRect.y, drawPortraitSize, drawPortraitSize);
 
-                Texture portraitTexture = state.PortraitGraphic.MatSingle.mainTexture;
+                Texture portraitTexture = state.PortraitTexture ?? state.PortraitGraphic?.MatSingle?.mainTexture;
                 if (portraitTexture != null)
                 {
                     Widgets.DrawTextureFitted(portraitRect, portraitTexture, 1f);
@@ -364,6 +379,7 @@ namespace ImmersiveOrbitalTraders
         public TraderKindDef TraderKind;
         public OrbitalTraderCharacterDef SelectedCharacter;
         public Graphic PortraitGraphic;
+        public Texture PortraitTexture;
         public string ResolvedLore;
         public DialogTrade_DoWindowContents_Patch.DialogTradePortraitWindow PanelWindow;
     }
@@ -372,6 +388,7 @@ namespace ImmersiveOrbitalTraders
     {
         public OrbitalTraderCharacterDef Character;
         public Graphic PortraitGraphic;
+        public Texture PortraitTexture;
         public string GeneratedName;
         public string ResolvedLore;
         public bool LoreResolved;

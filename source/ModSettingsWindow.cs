@@ -11,6 +11,7 @@ namespace ImmersiveOrbitalTraders
             listing.Begin(parent);
 
             listing.CheckboxLabeled("ImmersiveOrbitalTraders.Settings.AllowTraderCaravans.Label".Translate(), ref ModSettings.AllowTraderCaravans, "ImmersiveOrbitalTraders.Settings.AllowTraderCaravans.Tooltip".Translate());
+            listing.CheckboxLabeled("ImmersiveOrbitalTraders.Settings.UseRandomFactionPawnPortrait.Label".Translate(), ref ModSettings.UseRandomFactionPawnPortrait, "ImmersiveOrbitalTraders.Settings.UseRandomFactionPawnPortrait.Tooltip".Translate());
             listing.End();
         }
     }

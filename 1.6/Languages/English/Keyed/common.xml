@@ -4,5 +4,7 @@
   <ImmersiveOrbitalTraders.SettingsTitle>Immersive Orbital Traders</ImmersiveOrbitalTraders.SettingsTitle>
   <ImmersiveOrbitalTraders.Settings.AllowTraderCaravans.Label>Show portraits for trader caravans</ImmersiveOrbitalTraders.Settings.AllowTraderCaravans.Label>
   <ImmersiveOrbitalTraders.Settings.AllowTraderCaravans.Tooltip>Trader caravans already have visible pawns on the map and in trade context. Enabling portraits for caravans may mismatch the shown character and break immersion.</ImmersiveOrbitalTraders.Settings.AllowTraderCaravans.Tooltip>
+  <ImmersiveOrbitalTraders.Settings.UseRandomFactionPawnPortrait.Label>Use random faction pawn portraits</ImmersiveOrbitalTraders.Settings.UseRandomFactionPawnPortrait.Label>
+  <ImmersiveOrbitalTraders.Settings.UseRandomFactionPawnPortrait.Tooltip>Generates a random pawn from the trader faction and uses that pawn portrait texture instead of the static character portrait.</ImmersiveOrbitalTraders.Settings.UseRandomFactionPawnPortrait.Tooltip>
   <ImmersiveOrbitalTraders.NoLoreLabel>No lore available.</ImmersiveOrbitalTraders.NoLoreLabel>
 </LanguageData>
