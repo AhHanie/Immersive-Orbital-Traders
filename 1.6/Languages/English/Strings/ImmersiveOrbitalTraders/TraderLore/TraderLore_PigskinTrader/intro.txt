@@ -1,4 +1,0 @@
-﻿[name] runs practical freight for [faction], focused on what keeps a colony alive next week.
-[faction] markets [name] as a bulk supplier, but veterans know they are also an excellent fixer.
-[name]''s shuttle never looks glamorous, but it always looks full.
-[faction] advertises bulk discounts; veterans know he also solves emergencies quietly.

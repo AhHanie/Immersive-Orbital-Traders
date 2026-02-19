@@ -1,4 +1,0 @@
-﻿[name] negotiates for [faction] with a diplomat's cadence and a broker's instincts.
-Settlements tied to [faction] request [name] when tempers are high and trust is low.
-Rooms stop arguing when [name] lowers her voice instead of raising it.
-[faction] assigns her to contracts where bruised egos threaten more than pirates.

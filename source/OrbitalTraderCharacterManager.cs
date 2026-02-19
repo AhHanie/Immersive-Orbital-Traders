@@ -76,13 +76,13 @@ namespace ImmersiveOrbitalTraders
                 return null;
             }
 
-            if (preferredGender.HasValue)
+            if (preferredGender.HasValue && preferredGender.Value != Gender.None)
             {
                 List<OrbitalTraderCharacterDef> genderMatches = new List<OrbitalTraderCharacterDef>();
                 for (int i = 0; i < candidates.Count; i++)
                 {
                     OrbitalTraderCharacterDef candidate = candidates[i];
-                    if (candidate != null && candidate.gender == preferredGender.Value)
+                    if (candidate != null && (candidate.gender == preferredGender.Value || candidate.gender == Gender.None))
                     {
                         genderMatches.Add(candidate);
                     }
@@ -97,13 +97,15 @@ namespace ImmersiveOrbitalTraders
             return candidates.RandomElement();
         }
 
-        public static string ResolveLoreText(ITrader trader, OrbitalTraderCharacterDef characterDef, out string generatedName, string preferredName = null)
+        public static string ResolveLoreText(ITrader trader, OrbitalTraderCharacterDef characterDef, out string generatedName, string preferredName = null, Gender? preferredGender = null)
         {
+            Gender loreGender = ResolveLoreGender(characterDef, preferredGender);
+
             generatedName = string.IsNullOrWhiteSpace(preferredName)
-                ? GenerateTraderName(trader, characterDef)
+                ? GenerateTraderName(trader, characterDef, loreGender)
                 : preferredName;
 
-            string resolvedFromRulePack = ResolveFromRulePack(characterDef.loreRulePack, trader, characterDef, generatedName);
+            string resolvedFromRulePack = ResolveFromRulePack(characterDef.loreRulePack, trader, characterDef, generatedName, loreGender);
             if (!string.IsNullOrWhiteSpace(resolvedFromRulePack))
             {
                 return resolvedFromRulePack;
@@ -176,21 +178,36 @@ namespace ImmersiveOrbitalTraders
             }
         }
 
-        private static string ResolveFromRulePack(RulePackDef rulePack, ITrader trader, OrbitalTraderCharacterDef characterDef, string generatedName)
+        private static string ResolveFromRulePack(RulePackDef rulePack, ITrader trader, OrbitalTraderCharacterDef characterDef, string generatedName, Gender loreGender)
         {
             if (rulePack == null)
             {
                 return null;
             }
 
+            string factionName = ResolveFactionName(trader);
+            string startYear = ResolveStartYear(trader, characterDef);
+            string subjectPronoun = ResolveSubjectPronoun(loreGender);
+            string objectPronoun = ResolveObjectPronoun(loreGender);
+            string possessivePronoun = ResolvePossessivePronoun(loreGender);
+            string reflexivePronoun = ResolveReflexivePronoun(loreGender);
+            string genderLabel = ResolveGenderLabel(loreGender);
+
             GrammarRequest request = new GrammarRequest();
             request.Includes.Add(rulePack);
-            request.Rules.Add(new Rule_String("name", generatedName));
-            request.Rules.Add(new Rule_String("faction", ResolveFactionName(trader)));
-            request.Rules.Add(new Rule_String("startYear", ResolveStartYear(trader, characterDef)));
-            request.Constants["name"] = generatedName;
-            request.Constants["faction"] = ResolveFactionName(trader);
-            request.Constants["startYear"] = ResolveStartYear(trader, characterDef);
+            AddGrammarValue(ref request, "name", generatedName);
+            AddGrammarValue(ref request, "faction", factionName);
+            AddGrammarValue(ref request, "startYear", startYear);
+            AddGrammarValue(ref request, "subjectPronoun", subjectPronoun);
+            AddGrammarValue(ref request, "objectPronoun", objectPronoun);
+            AddGrammarValue(ref request, "possessivePronoun", possessivePronoun);
+            AddGrammarValue(ref request, "reflexivePronoun", reflexivePronoun);
+            AddGrammarValue(ref request, "SubjectPronoun", CapitalizeFirst(subjectPronoun));
+            AddGrammarValue(ref request, "ObjectPronoun", CapitalizeFirst(objectPronoun));
+            AddGrammarValue(ref request, "PossessivePronoun", CapitalizeFirst(possessivePronoun));
+            AddGrammarValue(ref request, "ReflexivePronoun", CapitalizeFirst(reflexivePronoun));
+            AddGrammarValue(ref request, "genderLabel", genderLabel);
+            AddGrammarValue(ref request, "GenderLabel", CapitalizeFirst(genderLabel));
 
             try
             {
@@ -202,14 +219,14 @@ namespace ImmersiveOrbitalTraders
             }
         }
 
-        private static string GenerateTraderName(ITrader trader, OrbitalTraderCharacterDef characterDef)
+        private static string GenerateTraderName(ITrader trader, OrbitalTraderCharacterDef characterDef, Gender loreGender)
         {
             int seed = GetLoreSeed(trader, characterDef);
             Rand.PushState(seed);
 
             try
             {
-                NameTriple generatedTriple = PawnBioAndNameGenerator.GeneratePawnName_Shuffled(PawnNameCategory.HumanStandard, characterDef.gender, null, forceNoNick: false);
+                NameTriple generatedTriple = PawnBioAndNameGenerator.GeneratePawnName_Shuffled(PawnNameCategory.HumanStandard, loreGender, null, forceNoNick: false);
                 string generatedName = generatedTriple.First + " " + generatedTriple.Last;
                 if (string.IsNullOrWhiteSpace(generatedName))
                 {
@@ -298,6 +315,108 @@ namespace ImmersiveOrbitalTraders
             {
                 return null;
             }
+        }
+
+        private static void AddGrammarValue(ref GrammarRequest request, string keyword, string value)
+        {
+            string safeValue = value ?? string.Empty;
+            request.Rules.Add(new Rule_String(keyword, safeValue));
+            request.Constants[keyword] = safeValue;
+        }
+
+        private static Gender ResolveLoreGender(OrbitalTraderCharacterDef characterDef, Gender? preferredGender)
+        {
+            if (preferredGender.HasValue && preferredGender.Value != Gender.None)
+            {
+                return preferredGender.Value;
+            }
+
+            if (characterDef != null && characterDef.gender != Gender.None)
+            {
+                return characterDef.gender;
+            }
+
+            return Gender.Male;
+        }
+
+        private static string ResolveSubjectPronoun(Gender gender)
+        {
+            switch (gender)
+            {
+                case Gender.Male:
+                    return "he";
+                case Gender.Female:
+                    return "she";
+                default:
+                    return "he";
+            }
+        }
+
+        private static string ResolveObjectPronoun(Gender gender)
+        {
+            switch (gender)
+            {
+                case Gender.Male:
+                    return "him";
+                case Gender.Female:
+                    return "her";
+                default:
+                    return "him";
+            }
+        }
+
+        private static string ResolvePossessivePronoun(Gender gender)
+        {
+            switch (gender)
+            {
+                case Gender.Male:
+                    return "his";
+                case Gender.Female:
+                    return "her";
+                default:
+                    return "his";
+            }
+        }
+
+        private static string ResolveReflexivePronoun(Gender gender)
+        {
+            switch (gender)
+            {
+                case Gender.Male:
+                    return "himself";
+                case Gender.Female:
+                    return "herself";
+                default:
+                    return "himself";
+            }
+        }
+
+        private static string ResolveGenderLabel(Gender gender)
+        {
+            switch (gender)
+            {
+                case Gender.Male:
+                    return "male";
+                case Gender.Female:
+                    return "female";
+                default:
+                    return "male";
+            }
+        }
+
+        private static string CapitalizeFirst(string value)
+        {
+            if (string.IsNullOrEmpty(value))
+            {
+                return string.Empty;
+            }
+
+            if (value.Length == 1)
+            {
+                return value.ToUpperInvariant();
+            }
+
+            return char.ToUpperInvariant(value[0]) + value.Substring(1);
         }
     }
 }

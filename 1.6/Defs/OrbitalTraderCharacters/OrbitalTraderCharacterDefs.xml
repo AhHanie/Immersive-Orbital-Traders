@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
     <defName>IOT_AndroidTrader</defName>
@@ -6,7 +6,7 @@
       <texPath>ImmersiveOrbitalTraders/AndroidTrader</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </portraitGraphicData>
-    <loreRulePack>TraderLore_AndroidTrader</loreRulePack>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
     <loreText>An android quartermaster with precise inventories and zero patience for haggling theatrics.</loreText>
     <gender>Male</gender>
   </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
@@ -17,7 +17,7 @@
       <texPath>ImmersiveOrbitalTraders/CatTrader</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </portraitGraphicData>
-    <loreRulePack>TraderLore_CatTrader</loreRulePack>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
     <loreText>A feline broker known for nimble negotiations and a suspicious talent for finding rare luxuries.</loreText>
     <gender>Female</gender>
   </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
@@ -28,7 +28,7 @@
       <texPath>ImmersiveOrbitalTraders/DirtmoleTrader</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </portraitGraphicData>
-    <loreRulePack>TraderLore_DirtmoleTrader</loreRulePack>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
     <loreText>This underground specialist moves ore, machinery, and black-box mining tech between frontier worlds.</loreText>
     <gender>Male</gender>
   </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
@@ -39,7 +39,7 @@
       <texPath>ImmersiveOrbitalTraders/GenieTrader</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </portraitGraphicData>
-    <loreRulePack>TraderLore_GenieTrader</loreRulePack>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
     <loreText>A gene-tailored analyst who prices cargo with unsettling speed and almost never makes a bad call.</loreText>
     <gender>Male</gender>
   </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
@@ -50,7 +50,7 @@
       <texPath>ImmersiveOrbitalTraders/HighmateTrader</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </portraitGraphicData>
-    <loreRulePack>TraderLore_HighmateTrader</loreRulePack>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
     <loreText>Soft-spoken and elegant, this envoy closes deals by keeping every conversation calm and focused.</loreText>
     <gender>Female</gender>
   </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
@@ -61,7 +61,7 @@
       <texPath>ImmersiveOrbitalTraders/HussarTrader</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </portraitGraphicData>
-    <loreRulePack>TraderLore_HussarTrader</loreRulePack>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
     <loreText>A battle-bred hauler captain who favors fast dock cycles and security-heavy cargo manifests.</loreText>
     <gender>Male</gender>
   </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
@@ -72,7 +72,7 @@
       <texPath>ImmersiveOrbitalTraders/ImpidTrader</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </portraitGraphicData>
-    <loreRulePack>TraderLore_ImpidTrader</loreRulePack>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
     <loreText>Quick with jokes and quicker with invoices, this impid merchant thrives on high-risk routes.</loreText>
     <gender>Female</gender>
   </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
@@ -83,7 +83,7 @@
       <texPath>ImmersiveOrbitalTraders/NeanderthalTrader</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </portraitGraphicData>
-    <loreRulePack>TraderLore_NeanderthalTrader</loreRulePack>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
     <loreText>A stoic heavy-lift specialist who treats every contract like a survival pact between settlements.</loreText>
     <gender>Male</gender>
   </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
@@ -94,7 +94,7 @@
       <texPath>ImmersiveOrbitalTraders/PigskinTrader</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </portraitGraphicData>
-    <loreRulePack>TraderLore_PigskinTrader</loreRulePack>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
     <loreText>Known for practical bulk trades, this pigskin captain always carries spare fuel and spare stories.</loreText>
     <gender>Male</gender>
   </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
@@ -105,7 +105,7 @@
       <texPath>ImmersiveOrbitalTraders/PirateTraderFemale</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </portraitGraphicData>
-    <loreRulePack>TraderLore_PirateTraderFemale</loreRulePack>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
     <loreText>A former raider turned broker who now profits by selling intelligence and hard-to-source weapons.</loreText>
     <gender>Female</gender>
   </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
@@ -116,7 +116,7 @@
       <texPath>ImmersiveOrbitalTraders/PirateTraderMale</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </portraitGraphicData>
-    <loreRulePack>TraderLore_PirateTraderMale</loreRulePack>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
     <loreText>He runs gray-market convoys through contested space and still insists every delivery is 'routine.'</loreText>
     <gender>Male</gender>
   </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
@@ -127,7 +127,7 @@
       <texPath>ImmersiveOrbitalTraders/SanguophageTrader</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </portraitGraphicData>
-    <loreRulePack>TraderLore_SanguophageTrader</loreRulePack>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
     <loreText>An ancient contract-holder who bargains in favors, relics, and supplies that never hit public markets.</loreText>
     <gender>Male</gender>
   </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
@@ -138,7 +138,7 @@
       <texPath>ImmersiveOrbitalTraders/StarjackTrader</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </portraitGraphicData>
-    <loreRulePack>TraderLore_StarjackTrader</loreRulePack>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
     <loreText>A voidsuit veteran who specializes in salvage lots and station components stripped from derelicts.</loreText>
     <gender>Male</gender>
   </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
@@ -149,7 +149,7 @@
       <texPath>ImmersiveOrbitalTraders/TraderAlien</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </portraitGraphicData>
-    <loreRulePack>TraderLore_TraderAlien</loreRulePack>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
     <loreText>This offworld emissary deals in unfamiliar alloys and expects strict adherence to ceremonial protocol.</loreText>
     <gender>Male</gender>
   </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
@@ -160,7 +160,7 @@
       <texPath>ImmersiveOrbitalTraders/WasterTrader</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </portraitGraphicData>
-    <loreRulePack>TraderLore_WasterTrader</loreRulePack>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
     <loreText>A toxic-zone courier who can source chems, filters, and survival gear most crews cannot handle.</loreText>
     <gender>Male</gender>
   </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
@@ -171,7 +171,7 @@
       <texPath>ImmersiveOrbitalTraders/YttakinTrader</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </portraitGraphicData>
-    <loreRulePack>TraderLore_YttakinTrader</loreRulePack>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
     <loreText>A cold-world negotiator with a reputation for fair weights, fair prices, and very sharp terms.</loreText>
     <gender>Male</gender>
   </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
@@ -182,7 +182,7 @@
       <texPath>ImmersiveOrbitalTraders/AITrader</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </portraitGraphicData>
-    <loreRulePack>TraderLore_AITrader</loreRulePack>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
     <loreText>A synthetic broker with near-perfect recall who prices opportunity faster than most crews can ask.</loreText>
     <gender>Female</gender>
   </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
@@ -193,8 +193,86 @@
       <texPath>ImmersiveOrbitalTraders/EldritchTrader</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </portraitGraphicData>
-    <loreRulePack>TraderLore_EldritchTrader</loreRulePack>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
     <loreText>An enigmatic offworld merchant offering strange materials under strict ritual terms.</loreText>
     <gender>Male</gender>
   </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
+
+  <ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
+    <defName>IOT_AngelicTrader</defName>
+    <portraitGraphicData>
+      <texPath>ImmersiveOrbitalTraders/AngelicTrader</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </portraitGraphicData>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
+    <loreText>An enigmatic angelic envoy dealing in reliquaries, rare medicines, and goodwill contracts.</loreText>
+    <gender>None</gender>
+  </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
+
+  <ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
+    <defName>IOT_ArcaneTrader</defName>
+    <portraitGraphicData>
+      <texPath>ImmersiveOrbitalTraders/Arcane Trader</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </portraitGraphicData>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
+    <loreText>A specialist in strange artifacts, sealed tomes, and contracts that always include fine print.</loreText>
+    <gender>None</gender>
+  </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
+
+  <ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
+    <defName>IOT_DragonkinTrader</defName>
+    <portraitGraphicData>
+      <texPath>ImmersiveOrbitalTraders/DragonkinTrader</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </portraitGraphicData>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
+    <loreText>A heavy-haul broker known for moving volatile cargo through routes others refuse to fly.</loreText>
+    <gender>None</gender>
+  </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
+
+  <ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
+    <defName>IOT_GoldenCubeTrader</defName>
+    <portraitGraphicData>
+      <texPath>ImmersiveOrbitalTraders/GoldenCubeTrader</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </portraitGraphicData>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
+    <loreText>A polished autonomous merchant intelligence with immaculate accounting and no sense of urgency.</loreText>
+    <gender>None</gender>
+  </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
+
+  <ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
+    <defName>IOT_JunkTrader</defName>
+    <portraitGraphicData>
+      <texPath>ImmersiveOrbitalTraders/JunkTrader</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </portraitGraphicData>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
+    <loreText>A salvage dealer who turns wreckage, spare parts, and broken systems into profitable lifelines.</loreText>
+    <gender>None</gender>
+  </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
+
+  <ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
+    <defName>IOT_RatkinTrader</defName>
+    <portraitGraphicData>
+      <texPath>ImmersiveOrbitalTraders/RatkinTrader</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </portraitGraphicData>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
+    <loreText>A fast-moving quartermaster with deep back-alley contacts and excellent emergency procurement skills.</loreText>
+    <gender>None</gender>
+  </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
+
+  <ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
+    <defName>IOT_SyntheticRobotTrader</defName>
+    <portraitGraphicData>
+      <texPath>ImmersiveOrbitalTraders/SyntheticRobotTrader</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </portraitGraphicData>
+    <loreRulePack>TraderLore_Shared</loreRulePack>
+    <loreText>A synthetic logistics broker optimized for repeat contracts, predictable lead times, and zero drama.</loreText>
+    <gender>None</gender>
+  </ImmersiveOrbitalTraders.OrbitalTraderCharacterDef>
 </Defs>
+

@@ -1,4 +1,0 @@
-﻿Their cargo is a rotating puzzle of reactor parts, pressure doors, and high-grade scrap composites.
-They can identify original manufacturers by fracture patterns on torn bulkheads.
-Reactor fragments, pressure doors, and reclaimed composites arrive sorted like puzzles solved mid-flight.
-[name] can read fracture lines the way other captains read weather reports.

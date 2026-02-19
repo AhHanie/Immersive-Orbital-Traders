@@ -1,0 +1,5 @@
+[intro] [history] [closing]
+[intro] [history] [style] [closing]
+[intro] [history] [specialty] [closing]
+[intro] [history] [edge] [closing]
+[intro] [history] [personality] [trait] [closing]

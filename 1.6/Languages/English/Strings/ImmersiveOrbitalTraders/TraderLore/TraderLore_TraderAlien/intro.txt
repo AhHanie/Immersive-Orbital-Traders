@@ -1,4 +1,0 @@
-﻿[name] arrives as an emissary trader bound to [faction] through layered treaties.
-Protocol officers in [faction] ports prepare ceremonial docks whenever [name] enters orbit.
-Ceremonial dock crews prepare hours early because [name] never treats first contact as routine.
-[faction] treaty officers rehearse the greeting sequence whenever this hull appears on long-range scan.

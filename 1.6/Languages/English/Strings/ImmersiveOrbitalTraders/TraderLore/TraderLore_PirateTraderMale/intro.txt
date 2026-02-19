@@ -1,4 +1,0 @@
-﻿[name] commands gray-market convoys tolerated by [faction] because results keep arriving.
-To [faction] accountants, [name] is listed as a logistics contractor with unusual discretion clauses.
-[name] calls every run routine, usually while escort cannons are still warm.
-[faction] accountants tolerate him because inconvenient cargo keeps arriving on inconvenient schedules.

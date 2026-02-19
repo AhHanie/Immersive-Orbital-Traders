@@ -117,7 +117,7 @@ namespace ImmersiveOrbitalTraders
                 return false;
             }
 
-            resolvedLore = OrbitalTraderCharacterManager.ResolveLoreText(trader, selected, out generatedName, generatedFactionPawnName);
+            resolvedLore = OrbitalTraderCharacterManager.ResolveLoreText(trader, selected, out generatedName, generatedFactionPawnName, generatedFactionPawnGender == Gender.None ? (Gender?)null : generatedFactionPawnGender);
             loreResolved = !string.IsNullOrWhiteSpace(resolvedLore);
 
             SelectionByTrader.Remove(trader);
@@ -394,3 +394,4 @@ namespace ImmersiveOrbitalTraders
         public bool LoreResolved;
     }
 }
+

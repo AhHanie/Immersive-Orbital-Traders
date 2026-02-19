@@ -1,4 +1,0 @@
-﻿[name] flies under [faction] colors and speaks only when the terms matter.
-[faction] keeps [name] on retainer for jobs where reliability outranks speed.
-[name] wastes no words, which is why every word lands like a hammer.
-[faction] keeps him close for jobs where reliability matters more than speed records.

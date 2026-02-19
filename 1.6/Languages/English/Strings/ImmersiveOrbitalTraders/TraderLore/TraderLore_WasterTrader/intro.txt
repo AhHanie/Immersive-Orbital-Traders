@@ -1,4 +1,0 @@
-﻿[name] contracts with [faction] to serve toxic belts where conventional crews refuse to land.
-[faction] route planners label [name] as essential for zones marked uninsurable.
-When [name] requests landing, med bays stock anti-tox kits before cargo crews suit up.
-[faction] planners mark those routes uninsurable and hand them over anyway.

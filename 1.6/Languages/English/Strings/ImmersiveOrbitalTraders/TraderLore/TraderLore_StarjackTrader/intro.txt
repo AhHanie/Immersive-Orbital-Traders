@@ -1,4 +1,0 @@
-﻿[name] works salvage lanes for [faction], bringing station debris back as usable fortune.
-[faction] trusts [name] to recover value from wreck fields everyone else writes off.
-[name] smells faintly of coolant and vacuum sealant even after formal decontamination.
-[faction] sends this crew where everyone else sees only debris and insurance losses.
